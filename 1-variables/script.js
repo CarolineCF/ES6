@@ -10,12 +10,13 @@ age += 1
 useless = 14
 
 console.log(name, age, useless)
+// La valeur d'une variable const ne peut être modifiée par des réaffectations ultérieures. Une constante ne peut être déclarée à nouveau.
 
 //----------------------//
 //1.2 Tableaux
 
-let fruits = ['apple', 'pear', 'cherry']
-let vegetables = ['potato', 'curlyflower', 'tomato']
+const fruits = ['apple', 'pear', 'cherry']
+const vegetables = ['potato', 'curlyflower', 'tomato']
 
 console.log(fruits, vegetables)
 
@@ -23,11 +24,12 @@ fruits.push('banana')
 vegetables.pop()
 
 console.log(fruits, vegetables)
+// pas d'erreur car on peut très bien ajouter un élément à un tableau déclaré en const
 
 //----------------------//
 //1.2 Objets
 
-let settings = {
+const settings = {
     sound: true,
     music: false,
     graphics: 'high',
@@ -39,7 +41,7 @@ let savedGame = {
     score: 47,
     opponent: 'Lolo'
 }
-
+//Impossible de déclarer savedGame en const car sa portée est celle du bloc et comme nous en avons besoin en dehors..
 console.log(settings, savedGame)
 
 savedGame = {}
@@ -48,4 +50,3 @@ settings.resolution = [3840, 2160]
 
 console.log(settings, savedGame)
 
-// La valeur d'une variable const ne peut être modifiée par des réaffectations ultérieures. Une constante ne peut être déclarée à nouveau.
