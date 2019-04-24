@@ -11,7 +11,20 @@ const bus = {
     },
     equipments: ['sae', 'tft', 'speech']
 }
+for (const [key, value] of Object.entries(bus)) {
+    console.log(key,':', value);
+  }
 
 //3.2 Object.values
 
-console.log(data)
+
+function showPerturbations() {
+
+    Object.values(data).forEach(value => {
+    
+    console.log(value.texte);
+});
+}
+
+showPerturbations();
+//console.log(data)
